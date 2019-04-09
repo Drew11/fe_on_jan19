@@ -9,6 +9,7 @@ export default class PhoneViewer extends Component {
         super({element});
         this._element = element;
         this._onBackButton = onBackButton;
+        console.log({element});
         this._addListener();
     }
 
@@ -21,7 +22,7 @@ export default class PhoneViewer extends Component {
     _addListener(){
         this._element.addEventListener('click',(event)=>{
             const backButton = this._element.querySelector('[data-back-button="backToCatalog"]');
-            if(event.target !==backButton){
+            if(event.target !== backButton){
                 return;
             }
             this._onBackButton();
