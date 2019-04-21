@@ -20,8 +20,6 @@ export default class PhoneViewer extends Component {
     }
 
     _addEvents(){
-
-
         this.on('click','[data-back-button="backToCatalog"]',()=>{
             this._element.setAttribute(`data-component`,`phone-viewer`);
             this.emit('back')
